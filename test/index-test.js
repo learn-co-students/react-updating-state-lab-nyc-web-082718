@@ -31,7 +31,6 @@ describe('<DigitalClicker />', () => {
     wrapper.find('button').simulate('click');
     wrapper.update();
     expect(wrapper.find('button').text()).to.equal('1');
-
     wrapper.find('button').simulate('click');
     wrapper.update();
     expect(wrapper.find('button').text()).to.equal('2');
@@ -57,6 +56,7 @@ describe('<YouTubeDebugger />', () => {
 
   it('should update the bitrate when the `.bitrate` button is clicked', () => {
     const wrapper = shallow(<YouTubeDebugger />);
+    console.log(wrapper.debug());
     const expectedState = deepClone(BASE_STATE);
     expectedState.settings.bitrate = 12;
 
